@@ -42,4 +42,26 @@ android folder:- Inside the flutter project contains the Android platform specif
 
 If you need to write any platform specific code will be making changes in here.
 
-ios folder:- 
+ios folder:- Similar to android folder, the ios folder contains ios specific settings, resources and code.
+You will make the platform specific code or changes in here.
+
+**lib folder:- The lib folder is main folder where you will write all the Flutter app related codes.
+Initially it will contain just one single ile main.dart which has the entry point for a Flutter app.
+
+test folder:- The test folder is set to contain any testing related codes that you write.
+If you decide to write test/test cases, you will be adding code in here.
+
+.gitignore folder:- this is a git specific file.
+You can adjust the .gitignore file to include/exclude any files/ folders as your need.
+
+.metadata folder:- As name suggest, the .metadata file contains flutter Project related metadata that flutter tool uses.
+You should not make any manual changes to this file.
+
+.packages folder:- A flutter project code is composed of numerous libraries and packages.
+Some packages are pre-installed with Flutter while others are downloaded during development.
+The .packages hold the path to each of the libraries/packages in your local computer.
+You do not need to make any manual change to this file.
+
+ReadMe.md:- it is the markdown format file which is primarily used to describe your project in git repo.
+
+
