@@ -66,3 +66,6 @@ ReadMe.md:- it is the markdown format file which is primarily used to describe y
 
 For creating a new project write command :- flutter create (project name).
 
+some commands:- for creating the project in flutter use (flutter create {project name})
+for checking the configuration into the pc use (flutter doctor)
+
