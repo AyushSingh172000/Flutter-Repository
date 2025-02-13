@@ -64,4 +64,5 @@ You do not need to make any manual change to this file.
 
 ReadMe.md:- it is the markdown format file which is primarily used to describe your project in git repo.
 
+For creating a new project write command :- flutter create (project name).
 
