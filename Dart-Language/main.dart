@@ -34,9 +34,29 @@
 // print(name);
 // }
 
-void main(){
-  var section; // dynamic datatype
-  section= "d";
-  section=4;
-  section=false;
+// void main(){
+//   var section; // dynamic datatype
+//   section= "d";
+//   section=4;
+//   section=false;
+// }
+
+// Final vs Const keywords:->
+
+
+main(){
+  final String name = "Ayush"; // this keyword is used when we have to assign a value which can't be overridden.
+
+  const subject = 'math';  // after declaring the const keyword the data into the list are get unmodifiable.
+
+  final names = [
+    "aman",
+    "ayush",
+    "misthi",
+    "aditi"
+  ];
+
+  names.add("tinku"); // into final keyword we can add the data into the list but we can't override final declared variable or method or class. 
+  print(names);
+  
 }

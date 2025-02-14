@@ -81,3 +81,12 @@ Maps are very flexible and can mutate their size based o the requirements.
 It is important to note that all lock(keys)need to be unique a map data type.
 var map_name={key1:value1,key2:value2,.....,keyN:valueN};
 
+Conditional Programming in Dart:-> when we want the navigation in our code we can use the conditional programming i.e., when we want to navigate our code like if condition get true the task will work or in case failure the other task will get executed.
+
+syntax:- if(condition){
+   // true
+}else{
+   // false
+}
+
+
