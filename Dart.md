@@ -49,3 +49,22 @@ void main() {
       }
    }
 }
+
+Difference btw dart var vs dynamic?
+
+var section; when it will not assign by any value then that type of variable will called as dyanamic datatype
+behalf of that we use dynamic keyword also.
+section= "d";
+section=4;
+section=false;
+
+Functions:-> A function is a group of statements that together performs a specific task. Let us look into a simple function in Dart as shown here:−>
+
+void main() {
+   add(3,4);
+}
+void add(int a,int b) {
+   int c;
+   c = a+b;
+   print(c);
+}
