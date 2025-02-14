@@ -2,8 +2,9 @@ import 'dart:io';
 void main(){
   var addition = Add();
   //print(addition.add());
-  var sum=addition.add();
-  print('The addition of given number is: $sum');
+  print('The addition of given number is: ${addition.add()}'); // here with the help of $ sign we can get output in one line.
+  // var sum=addition.add();
+  // print('The addition of given number is: $sum');
 
 }
 class Add {
