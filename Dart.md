@@ -68,3 +68,16 @@ void add(int a,int b) {
    c = a+b;
    print(c);
 }
+
+List in Dart:-> dart List is similar to an array, which is the ordered collection of the objects.
+The array is the most popular and commonly used collection in any array other programming language.
+The syntax of declaring the list is given below.
+Var list1 = [10,20,30,50]
+The Dart list is defined by storing all elements inside the square bracket([]) and separated by commas(,).
+
+Maps in Dart:-> In dart programming, maps are dictionary-like date type that exist in key value form.
+There is no restriction on the type of data that goes in a map data type.
+Maps are very flexible and can mutate their size based o the requirements.
+It is important to note that all lock(keys)need to be unique a map data type.
+var map_name={key1:value1,key2:value2,.....,keyN:valueN};
+
