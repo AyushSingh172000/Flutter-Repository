@@ -131,6 +131,43 @@ Types of Buttons:-1> Text Button(Flat Button)
             },
       )
       
+For image into flutter:-> 
+Command Description
+flutter pub get	                        Fetch dependencies from pubspec.yaml
+flutter pub upgrade	                  Upgrade all dependencies to latest versions
+flutter pub upgrade --major-versions	Force all dependencies to latest major versions
+flutter pub add <package>	            Add a new package
+flutter pub remove <package>	            Remove a package
+flutter pub outdated	                  Show outdated dependencies
       
-
+Column and Rows Widgets:-> One of the most common layout patterns is to arrange widgets vertically or horizontally.
+You can use a Row widget to arrange widget horizontally, and a Column widget to arrange widget vertically. 
+child: Row(
+        mainAxisAlignment: MainAxisAlignment.center, spacing: 20, // when want changes horizontally in row only change in mainAxisAlignment.
+        crossAxisAlignment: CrossAxisAlignment.end, // When want changes in vertically in row only change in crossaxisalignmnet.
+        children: [
+          Text('A', style: TextStyle(fontSize: 25),),
+          Text('B', style: TextStyle(fontSize: 25),),
+          Text('C', style: TextStyle(fontSize: 25),),
+          Text('D', style: TextStyle(fontSize: 25),),
+          Text('E', style: TextStyle(fontSize: 25),),
+          ElevatedButton(onPressed: (){
+            print('button clicked');
+          }, child: Text('click'))
+        ],
+      ), 
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center, spacing: 20, // when want changes horizontally in row only change in mainAxisAlignment.
+        crossAxisAlignment: CrossAxisAlignment.end, // When want changes in vertically in row only change in crossaxisalignmnet.
+        children: [
+          Text('1', style: TextStyle(fontSize: 25),),
+          Text('2', style: TextStyle(fontSize: 25),),
+          Text('3', style: TextStyle(fontSize: 25),),
+          Text('4', style: TextStyle(fontSize: 25),),
+          Text('5', style: TextStyle(fontSize: 25),),
+          ElevatedButton(onPressed: (){
+            print('button clicked');
+          }, child: Text('click'))
+        ],
+      ),      
 
