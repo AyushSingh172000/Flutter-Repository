@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
+
 void main() {
   runApp(const MyApp());
 }
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.deepPurple,
       ),
       home: const MyHomePage(),
     );
@@ -26,34 +27,21 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text('Flutter Container'),
+        title: Text('Add Image'),
       ),
       body: Center(
-        child: 
-        Container(
-        width: 500,
-        height: 500,
-        color: Colors.blueAccent,
-        child: Center(
-        child: Text('Hello Flutter Devs', style: TextStyle(
-        fontSize: 25, 
-        color: Colors.deepOrange,
-        backgroundColor: Colors.amber,
-        fontWeight: FontWeight.bold,
-        
-        ),),
-      ),
-      
-      ),
+        child: SizedBox(
+          width: 500,
+          height: 500,
+          child: Image.asset('assets/images/logo.png'),
+        )
       )
       
-      );
+    );
   }
 }

@@ -103,4 +103,34 @@ Ex:-> body: Text('Hello Flutter Devs', style: TextStyle(
         color: Colors.deepOrange
         ),),
 
+Buttons:-> It is the graphical control element that provides A user to trigger an event such as taking actions, making choices, searching things, and many more. They can be placed anywhere in our UI like dialogs, forms, cards, toolbars, etc.
+By default Ripple action will get on all button types.
+Ripple i.e. small click type action.
+Types of Buttons:-1> Text Button(Flat Button)
+                  2> Elevated Button(Raised Button)
+                  3> Outlined Button      
+      Ex:->
+          body: TextButton(
+          child: Text('Click Here!'),
+          onPressed: () // It is used to perform some action by the button.
+          {
+          print('Text Button Tapped!');
+        },
+        onLongPress: () // it is used to long press by this we achieve our action.
+      ),
+      body: ElevatedButton(
+            child: Text('Elevated Button'),
+            onPressed: (){
+                  print('Button pressed');
+            },
+      )
+      body: OutlinedButton(
+            child: Text('Outlined Button'),
+            onPressed: (){
+                  print('Outlined Click')
+            },
+      )
+      
+      
+
 

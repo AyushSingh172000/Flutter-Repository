@@ -7,7 +7,7 @@ main(){
   //   'address':'noida sec-10'
 
   // };
-  var mapName= Map();
+  var mapName= Map();       // map object created at run time. The role of map is mostly used when we want to create dynamic web or app.
   mapName['name']="Misthi";
   mapName['phone']=392151476;
   mapName['email']="misthi@gmail.com";
