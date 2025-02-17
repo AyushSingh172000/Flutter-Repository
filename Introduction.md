@@ -69,3 +69,38 @@ For creating a new project write command :- flutter create (project name).
 some commands:- for creating the project in flutter use (flutter create {project name})
 for checking the configuration into the pc use (flutter doctor)
 
+Widgets:->
+The core concept of the Flutter framework is In Flutter, Everything is a widget. Widgets are basically user interface components used to create the user interface of the application.
+
+In Flutter, the application is itself a widget. The application is the top- level widget and its UI is build using one or more children (widgets), which again build using its children widgets. This composability feature helps us to create a user interface of any complexity.
+
+Container:-> It is a widget that combines common painting, positioning, and sizing of the child widgets.
+:-It is also a class to store one or more widgets and position them on te screen according to our needs.
+:-Generally, it is similar to a box for storing contents.
+:-It allows many attributes to the user for decorating its child widget such as using margin, which separates the container with other contents. 
+
+Center Widget:- This widget is used to center their child widgets.
+OR
+To wrap up the widget which we want to take into the center.
+Ex:-> //Center(
+      //   child:Container(
+      //   width: 100,
+      //   height: 100,
+      //   color: Colors.red,
+      //   child:
+      //   Center(
+      //   child: Text("Hello Developers!!!!", style: TextStyle(color:Colors.white),
+      //    ),
+      //   ),
+      //),
+      //),
+
+Text Widget:- The Text Widget display a String of text with single style.
+
+The string might break across multiple lines or might all be displayed on the same line depending on the layout constraint.
+Ex:-> body: Text('Hello Flutter Devs', style: TextStyle(
+        fontSize: 25, 
+        color: Colors.deepOrange
+        ),),
+
+
