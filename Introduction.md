@@ -171,3 +171,35 @@ child: Row(
         ],
       ),      
 
+Inkwell:-> Inkwell is the material widget in flutter.
+           It responds to the touch action as performed by the user.
+           Inkwell will responds when the user clicks it/Tap on it.
+           There are so many gestures like double-tap, long press, tap down, etc. 
+
+ScrollView:-> It is used when the data present on the screen get overflow. It simply provides the scroll into the screen.
+
+List View:-> Listview in flutter is a widget used to display items in a linear manner.  
+            For Ex:- list view is used in apps like zomato and swiggy to display a list of resturants.
+            Since it is a scrollable widget we can display multiple items on the same screen.
+            If the scroll direction is vertical the children will be arranged one after another from top to bottom.
+            When the scroll direction is horizontal the children will be arranged from left to right.
+
+Icon:->
+
+Icon widget is used to display a glyph from a font described in IconData class. The code to load a simple email icon is as follows −>
+
+Icon(Icons.email)
+
+class MyHomePage extends StatelessWidget { 
+   MyHomePage({Key key, this.title}) : super(key: key); 
+   final String title; 
+
+   @override 
+   Widget build(BuildContext context) {
+      return Scaffold(
+         appBar: AppBar(title: Text(this.title),),
+         body: Center( child: Icon(Icons.email)),
+      );
+   }
+}
+

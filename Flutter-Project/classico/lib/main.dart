@@ -36,10 +36,15 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text('Column and Rows'),
       ),
-      body: Container(
-        height: 500,
-        width: 700,
-        child: Row( mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      body: Center(
+        //child: SingleChildScrollView(
+          //scrollDirection: Axis.horizontal,
+          child: Container(
+        height: 300,
+        width: 500,
+        child: SingleChildScrollView(     // It is used for the scrolling the data which will overflow from the screen.
+          scrollDirection: Axis.horizontal,
+          child: Row( mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Column( mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -53,7 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   Text('Pavlova is a meringue-based dessert named after the Russian ballerine Anna Pavlova. Pavlova features a crisp crust and soft, light inside, topped with fruit and whipped cream.',style: TextStyle(fontSize: 15,fontWeight:FontWeight.bold)),
     
                   
-                    Row( mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    Row( mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                       Text('*****',style: TextStyle(fontSize: 15,fontWeight:FontWeight.bold)),
                       //Spacer(),
@@ -61,7 +66,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ],
                     ),
 
-                    Row( mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    Row( mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                       Text('PREP:',style: TextStyle(fontSize: 15,fontWeight:FontWeight.bold)),
                       //Spacer(),
@@ -78,8 +83,11 @@ class _MyHomePageState extends State<MyHomePage> {
             Image.asset('assets/images/strawberry.jpg'),
           ],
         )
+        ),
 
-      )
+      ),
+        ),
+    //  )
     );
   }
 }
