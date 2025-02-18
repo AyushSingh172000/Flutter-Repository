@@ -42,14 +42,19 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             title: Text(arrNames[index], style: TextStyle(fontSize: 20)),
             subtitle: Text('${arrContact[index]}'),
-            trailing: InkWell(
-              child: Icon(Icons.add),
-            ), 
+            //trailing: Icon(Icons.add), just simple icon.
+            trailing:InkWell(
+              child: Icon(Icons.add, color: Colors.blue),
+              onTap: (){
+                print("${arrNames[index]} added!");
+
+              }),
+             
           );
         },
         itemCount: arrNames.length,
         separatorBuilder: (context, index) {
-          return Divider(height: 100, thickness: 1);
+          return Divider(height: 100, thickness: 1, color: Colors.grey[300]);
         },
       ),
     );
