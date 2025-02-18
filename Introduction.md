@@ -227,3 +227,21 @@ Example                   	📌 A simple label (e.g., "Welcome!")	🔢 A counter
 :-> If your UI needs updates (e.g., user clicks a button) → Use Stateful Widget ✅
 
 Expanded Widget:-> When it will get space in their child widget or anywhere in widget it simply expand its child widgets.
+
+Circle Avatar:-> It is simply a Circle in which we can add background color, background image, or just some text.
+
+It usually represents a user with his image or with his initials.
+
+Although we can make a similar widget from the group up,
+
+this widget comes in handy in the fast development of an application.
+
+Ex:->  body: Center(
+         child: CircleAvatar(
+           //child: Text('Kallu', style: TextStyle(color: Colors.black,fontSize: 25),),
+         backgroundImage: AssetImage('assets/images/boy.png'),
+         backgroundColor: Colors.red,
+         radius: 30,
+        
+         ),
+         ),
