@@ -25,7 +25,7 @@ class MyHomePage extends StatefulWidget {
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
-
+/**************************************** Adding Image************************************************ */
 // class _MyHomePageState extends State<MyHomePage> {
 //   @override
 //   Widget build(BuildContext context) {
@@ -78,21 +78,28 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
 
-    var arrNames = ['Ayush','Misthi','Kalash','Mukund','Ambuj'];
+   // var arrNames = ['Ayush','Misthi','Kalash','Mukund','Ambuj'];
 
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         //title: Text('Add Image'),
-        title: Text('List_View'),
+        //title: Text('List_View'),
+        title: Text('Add Fonts'),
       ),
 
-  body: ListView.builder(itemBuilder: (context, index) {
-    return Text(arrNames[index], style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),);
-  },
-  itemCount: arrNames.length,
-  itemExtent: 50,
-  ),
+  // body: ListView.builder(itemBuilder: (context, index) {
+  //   return Text(arrNames[index], style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),);
+  // },
+  // itemCount: arrNames.length,
+  // itemExtent: 50,
+  // ),
+
+  /*****************************************Adding Fonts********************************************** */
+
+  body: Center(
+    child: Text('Hello Developers!!', style: TextStyle(fontSize: 30, fontFamily: 'Sigmar'),),
+  )
 
     );
   }
