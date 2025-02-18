@@ -11,7 +11,7 @@ class DemoApp extends StatelessWidget {
       title: "DemoApp",
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue
+        primarySwatch: Colors.blueGrey,
         ),
         home: DashBoardScreen(),
     );
