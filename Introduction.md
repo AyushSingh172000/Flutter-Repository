@@ -203,3 +203,25 @@ class MyHomePage extends StatelessWidget {
    }
 }
 
+Stateful and StatelessWidgets:-> 
+
+🆚 Difference Between Stateless and Stateful Widgets (Easy Explanation)
+Feature	                Stateless Widget                        🟠	Stateful Widget 
+🔵Can Change?	             ❌ No – UI stays the same	                ✅ Yes – UI updates when needed
+
+Stores Data?	              ❌ No – No memory of past values	         ✅ Yes – Keeps track of changes
+
+Rebuilds?	                  🚀 Only once, unless the whole app refreshes🔄 Multiple times when setState() is called
+Best For?	                   Static UI (Text, Icons, Images)	          Interactive UI (Buttons, Forms, Animations)
+
+Example                   	📌 A simple label (e.g., "Welcome!")	🔢 A counter that increases on button press
+
+📌 Example in Simple Terms:->
+
+:-> Stateless Widget is like a printed newspaper – once printed, it never changes.
+:-> Stateful Widget is like a whiteboard – you can erase and rewrite on it.
+
+💡 Which One Should You Use?
+
+:-> If your UI doesn’t change → Use Stateless Widget ✅
+:-> If your UI needs updates (e.g., user clicks a button) → Use Stateful Widget ✅
