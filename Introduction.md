@@ -245,3 +245,7 @@ Ex:->  body: Center(
         
          ),
          ),
+
+Text Input Widget:-> A TextField is an input element which holds the alphanumeric data, such as name, password, address, etc.
+
+Enables the user to enter text information using a programmable code.

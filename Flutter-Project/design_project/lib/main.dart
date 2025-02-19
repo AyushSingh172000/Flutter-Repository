@@ -56,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Text('Hello World!', style: Theme.of(context).textTheme.headlineLarge!.copyWith(color: Colors.green)),
             Text('Hello Developers!', style: mTextStyle15(),),
             Text('Hello Developers!', style: mTextStyle20(),),
-            Text('Hello Developers!', style: mTextStyle30(),),
+            Text('Hello Developers!', style: mTextStyle30(textColor: Colors.green),),
 
           ],
         
