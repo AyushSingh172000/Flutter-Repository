@@ -1,4 +1,5 @@
 //import 'package:flutter/foundation.dart';
+import 'package:design_project/ui_helper/util.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -53,7 +54,9 @@ class _MyHomePageState extends State<MyHomePage> {
             Text('Hello World!', style: Theme.of(context).textTheme.headlineLarge!.copyWith(color: Colors.red)),
             Text('Hello World!', style: Theme.of(context).textTheme.headlineSmall,),
             Text('Hello World!', style: Theme.of(context).textTheme.headlineLarge!.copyWith(color: Colors.green)),
-            Text('Hello World!', style: Theme.of(context).textTheme.headlineSmall,),
+            Text('Hello Developers!', style: mTextStyle15(),),
+            Text('Hello Developers!', style: mTextStyle20(),),
+            Text('Hello Developers!', style: mTextStyle30(),),
 
           ],
         
