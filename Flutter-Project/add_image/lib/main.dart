@@ -5,7 +5,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -78,7 +78,7 @@ class MyHomePage extends StatefulWidget {
       //   ],
       // ) ,
       
-/****************************************************List_Builder****************************************************/
+/// **************************************************List_Builder***************************************************
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {

@@ -124,7 +124,7 @@ body: ListView.separated(itemBuilder: (context, index){
   return ListTile(
     leading: Text('${index+1}'),
     title: Text(arrNames[index], style: TextStyle(fontSize: 20),),
-    subtitle: Text('${arrContact[index]}'),
+    subtitle: Text(arrContact[index]),
     trailing: Icon(Icons.add),
   );
 }, 

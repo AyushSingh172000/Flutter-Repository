@@ -41,7 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
               backgroundImage: AssetImage('assets/images/boy.png'),
             ),
             title: Text(arrNames[index], style: TextStyle(fontSize: 20)),
-            subtitle: Text('${arrContact[index]}'),
+            subtitle: Text(arrContact[index]),
             //trailing: Icon(Icons.add), just simple icon.
             trailing:InkWell(
               child: Icon(Icons.add, color: Colors.blue),
@@ -54,7 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
         },
         itemCount: arrNames.length,
         separatorBuilder: (context, index) {
-          return Divider(height: 100, thickness: 1, color: Colors.grey[300]);
+          return Divider(height: 100, thickness: 1, color: Colors.red);
         },
       ),
     );

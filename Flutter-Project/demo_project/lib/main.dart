@@ -5,6 +5,8 @@ void main(){
 }
 
 class DemoApp extends StatelessWidget {
+  const DemoApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,6 +22,8 @@ class DemoApp extends StatelessWidget {
 }
 
 class DashBoardScreen extends StatelessWidget {
+  const DashBoardScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

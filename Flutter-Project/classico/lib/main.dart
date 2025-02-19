@@ -39,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         //child: SingleChildScrollView(
           //scrollDirection: Axis.horizontal,
-          child: Container(
+          child: SizedBox(
         height: 300,
         width: 500,
         child: SingleChildScrollView(     // It is used for the scrolling the data which will overflow from the screen.
