@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/Flutter-Project/add_image/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter-Project/add_image/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter-Project/add_image/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter-Project/card_project/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter-Project/card_project/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter-Project/card_project/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter-Project/classico/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter-Project/classico/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter-Project/classico/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter-Project/contact_project/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter-Project/contact_project/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter-Project/contact_project/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter-Project/demo_project/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter-Project/demo_project/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter-Project/demo_project/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter-Project/design_project/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter-Project/design_project/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter-Project/design_project/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter-Project/dummy/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter-Project/dummy/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter-Project/dummy/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter-Project/login_page_project/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter-Project/login_page_project/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter-Project/login_page_project/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter-Project/my_first_project/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter-Project/my_first_project/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter-Project/my_first_project/build" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Dart SDK" level="project" />
+    <orderEntry type="library" name="Dart Packages" level="project" />
+  </component>
+</module>

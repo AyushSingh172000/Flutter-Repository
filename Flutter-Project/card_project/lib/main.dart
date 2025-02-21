@@ -1,5 +1,8 @@
+import 'package:card_project/ui_helper/util.dart';
+import 'package:card_project/widgets/rounded_btn.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -34,21 +37,25 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
+  // callBack(){                             // CallBack Function
+  //   print('Callback Clicked!!');
+  // }
+
   // var emailText = TextEditingController();
   // var passText = TextEditingController();
   @override
   Widget build(BuildContext context) {
     //var time = DateTime.now(); // to get the current date and time.
-    var arrColors = [Colors.yellow,
-    Colors.red,
-    Colors.black,
-    Colors.purple,
-    Colors.deepOrange,
-    Colors.brown,
-    Colors.green,
-    Colors.yellowAccent,
-    Colors.blue,
-    Colors.brown];
+    // var arrColors = [Colors.yellow,
+    // Colors.red,
+    // Colors.black,
+    // Colors.purple,
+    // Colors.deepOrange,
+    // Colors.brown,
+    // Colors.green,
+    // Colors.yellowAccent,
+    // Colors.blue,
+    // Colors.brown];
     return Scaffold(
       appBar: AppBar(backgroundColor: Colors.blue,
           title: Text(widget.title),
@@ -281,12 +288,208 @@ class _MyHomePageState extends State<MyHomePage> {
 
       /****************************************************** Grid View Builder *****************************************/
 
-      body: GridView.builder(itemBuilder:(context, index){
-    return Container(color: arrColors[index],);
-    },itemCount: arrColors.length, 
-       // gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, crossAxisSpacing: 10, mainAxisSpacing: 10),
-        gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(maxCrossAxisExtent: 100, crossAxisSpacing: 10, mainAxisSpacing: 10),
-      ),
+    //   body: GridView.builder(itemBuilder:(context, index){
+    // return Container(color: arrColors[index],);
+    // },itemCount: arrColors.length,
+    //    // gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, crossAxisSpacing: 10, mainAxisSpacing: 10),
+    //     gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(maxCrossAxisExtent: 100, crossAxisSpacing: 10, mainAxisSpacing: 10),
+    //   ),
+      /****************************************************** CallBack Function***************************************/
+      // body: ElevatedButton(
+      //     child: Text('Click Me!!', style: TextStyle(fontSize: 20),),
+      //     onPressed: callBack,  // callback function it is declared in _MyHomePageState.
+      // ),
+
+      /****************************************************** Custom Widget******************************************/
+
+      // body: Center(
+      //   child: Container(
+      //     width: 150,
+      //     child: RoundedButton(
+      //       btnName: 'Login',
+      //       icon: Icon(Icons.lock),
+      //       callback: (){
+      //         print('Logged In!!');
+      //       },
+      //       textStyle: mTextStyle15(),
+      //     ),
+      //   ),
+      // )
+      /****************************************************** Positioned and Stack Widget******************************************/
+
+      // body: Center(
+      //   child: Stack(
+      //     children: [
+      //       Container(
+      //         height: 200,
+      //         width: 200,
+      //         color: Colors.blue,
+      //       ),
+      //       Container(
+      //         height: 150,
+      //         width: 150,
+      //         color: Colors.yellowAccent,
+      //       ),
+      //       Positioned(
+      //         top: 15,
+      //         right: 15,
+      //         left: 15,
+      //         bottom: 15,
+      //         child: Container(
+      //         height: 100,
+      //         width: 100,
+      //         color: Colors.red,
+      //       ),)
+      //     ],
+      //   ),
+      // ),
+
+      /****************************************************** Wrap Widget******************************************/
+
+      // body: Center(
+      //   child: Wrap(
+      //     spacing: 10,
+      //     runSpacing: 10,
+      //     children: [Container(
+      //       width: 70,
+      //       height: 70,
+      //       color: Colors.red,
+      //     ),
+      //     Container(
+      //       width: 70,
+      //       height: 70,
+      //       color: Colors.yellowAccent,
+      //     ),
+      //       Container(
+      //         width: 70,
+      //         height: 70,
+      //         color: Colors.blue,
+      //       ),
+      //       Container(
+      //         width: 70,
+      //         height: 70,
+      //         color: Colors.green,
+      //       ),
+      //       Container(
+      //         width: 70,
+      //         height: 70,
+      //         color: Colors.grey,
+      //       ),
+      //       Container(
+      //         width: 70,
+      //         height: 70,
+      //         color: Colors.brown,
+      //       ),
+      //       Container(
+      //         width: 70,
+      //         height: 70,
+      //         color: Colors.black,
+      //       ),
+      //       Container(
+      //         width: 70,
+      //         height: 70,
+      //         color: Colors.lightBlueAccent,
+      //       ),
+      //       Container(
+      //         width: 70,
+      //         height: 70,
+      //         color: Colors.orangeAccent,
+      //       ),
+      //       Container(
+      //         width: 70,
+      //         height: 70,
+      //         color: Colors.pink,
+      //       ),
+      //       Container(
+      //         width: 70,
+      //         height: 70,
+      //         color: Colors.purple,
+      //       ),
+      //     ],
+      //   )
+      //
+      // ),
+      //
+
+      /****************************************************** SizedBox Widget******************************************/
+      // body: Center(
+      //   child: SizedBox(
+      //     width: 100,
+      //     height: 30,
+      //     child: ElevatedButton(
+      //         style: ElevatedButton.styleFrom(
+      //           backgroundColor: Colors.blue, // Set button color
+      //           foregroundColor: Colors.white, // Set text color
+      //           shadowColor: Colors.black, // Set shadow color
+      //           elevation: 10, // Add elevation for depth
+      //         ),
+      //         onPressed: (){
+      //       print('Clicked!!!!');
+      //     }, child: Text('Click')
+      //     ),
+      //   ),
+      // ),
+
+      /****************************************************** Rich Text Widget******************************************/
+      
+      // body: Center(
+      //   child: RichText(text: TextSpan(
+      //     style: TextStyle(
+      //       color: Colors.green,
+      //       fontSize: 21,
+      //     ),
+      //         children: <TextSpan>[
+      //           TextSpan(text: 'Hello '),
+      //           TextSpan(text: 'World!!', style: TextStyle(
+      //             fontSize: 34,
+      //             color: Colors.blue,
+      //             fontWeight: FontWeight.bold,
+      //           )),
+      //           TextSpan(
+      //             text: ' Welcome to ',
+      //           ),
+      //           TextSpan(
+      //             text: 'Flutter',
+      //             style: TextStyle(
+      //               fontWeight: FontWeight.bold,
+      //               fontSize: 25,
+      //               color: Colors.deepOrange,
+      //               fontStyle: FontStyle.italic,
+      //               fontFamily: 'Montserrat'
+      //             ),
+      //           ),
+      //       ],
+      //   )),
+      // ),
+
+      /****************************************************** Icon Widget******************************************/
+      
+      // body: Center(
+      //   child: Icon(Icons.add_business_rounded,     // Predefined Icons provided by the flutter.
+      //     size: 50,
+      //     color: Colors.deepOrange,
+      //   ),
+      // ),
+
+      /****************************************************** FontAwesome Icon Widget******************************************/
+
+      // body: Center(
+      //   child: Row(
+      //     children: [
+      //       Icon(
+      //         Icons.play_circle_outline,
+      //         size: 50,
+      //         color: Colors.red,
+      //       ),
+      //       SizedBox(width: 11,),
+      //       FaIcon(FontAwesomeIcons.amazon, size: 50, color: Colors.lightBlueAccent,)
+      //     ],
+      //   ),
+      // ),
+
+
+
+
     );
   }
 }

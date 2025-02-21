@@ -249,3 +249,15 @@ Ex:->  body: Center(
 Text Input Widget:-> A TextField is an input element which holds the alphanumeric data, such as name, password, address, etc.
 
 Enables the user to enter text information using a programmable code.
+
+Callback Function:-> It is similar like other function but it will pass as an argument into an another functions.
+
+Stack Widget:-> In Flutter, a Stack widget is a layout widget that allows you to place multiple widgets on top of each other, similar to a stack of cards. It positions its children relative to the edges of its box.
+A Widget that positions its children relative to the edges of its box.
+This class is useful if you want to overlap several children in a simple way,
+for example having some text and an image, overlaid with a gradient and a button attached to the bottom.
+
+
+SingleChildScrollView:-> It is used to overcome the overlay error and it will put one scroller into the project and make it scrollable.
+Into this one ScrollDirection option is available and we can provide the Direction for the scrolling.
+Ex: scrollDirection: Axis.horizontal,
