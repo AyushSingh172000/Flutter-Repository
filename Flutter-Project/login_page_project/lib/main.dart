@@ -141,7 +141,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 12),
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
                       ),
-                      onPressed: () {
+                      onPressed: () async {
                         String userEmail = emailText.text.trim();
                         String userPass = passText.text.trim();
 
@@ -152,7 +152,10 @@ class _MyHomePageState extends State<MyHomePage> {
                           return;
                         }
 
-                        print('Email: $userEmail, Password: $userPass');
+                          print('Email: $userEmail, Password: $userPass');
+                         emailText.clear();
+                         passText.clear();
+
                       },
                       child: const Text('Log In'),
                     ),
