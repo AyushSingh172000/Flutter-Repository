@@ -1,9 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:provider_project/counter_provider.dart';
+import 'package:provider_project/list_map_provider.dart';
+import 'package:provider_project/list_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context)=> ListMapProvider()),
+        ChangeNotifierProvider(create: (context)=> CounterProvider()),
+      ],
+      child: MyApp()
+  )
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -21,10 +30,13 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: ChangeNotifierProvider(
-        create: (_) => CounterProvider(),
-        child: MyHomePage(),
-      )
+      home: ListPage(),
+      //ChangeNotifierProvider(
+        // create: (_) => CounterProvider(),
+        // child: MyHomePage(),
+        // create: (_) => ListMapProvider(),
+        // child: ListPage(),
+      //)
     );
   }
 }
@@ -33,7 +45,7 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print('hi buddy');  //here we check that the whole page get reload whenever we increase the count so for ignore this problem we use Consumer.
+    //print('hi buddy');  //here we check that the whole page get reload whenever we increase the count so for ignore this problem we use Consumer.
     return Scaffold(
       appBar: AppBar(
         title: Text('Home'),
@@ -50,7 +62,7 @@ class MyHomePage extends StatelessWidget {
             const Text('You have pushed the button this many times:'),
             Consumer<CounterProvider>(
                 builder: (ctx, _, __){  // we use ctx here because with this ctx we can rebuilt only this text widget.
-                  print('Consumer build function called!!');
+                 // print('Consumer build function called!!');
               return Text(
                 // '${Provider.of<CounterProvider>(ctx, listen: true) /// By default the listen: is true.
                 //     .getCount()}',
