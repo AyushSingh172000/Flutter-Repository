@@ -260,4 +260,13 @@ for example having some text and an image, overlaid with a gradient and a button
 
 SingleChildScrollView:-> It is used to overcome the overlay error and it will put one scroller into the project and make it scrollable.
 Into this one ScrollDirection option is available and we can provide the Direction for the scrolling.
-Ex: scrollDirection: Axis.horizontal,
+Ex: scrollDirection: Axis.horizontal.
+
+For StateManagements:->
+Local/Emphemeral State:-> Stateful Widget and Stateful Builder
+Global/App State:-> Provider and Cubit/Block, Riverpod, Redux, Getx.
+
+Provider:-> 1. Class of change Notifier
+            2. Function of notify listener
+            3. Change Notifier Provider
+            4. Cosumer
