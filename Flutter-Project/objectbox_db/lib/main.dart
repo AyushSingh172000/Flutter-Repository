@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:objectbox_db/Insert_Data.dart';
 
-void main() {
+import 'helper.dart';
+late ObjectBox objectbox;
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  objectbox = await ObjectBox.create();
   runApp(const MyApp());
 }
 
@@ -69,7 +73,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 width: size.width * .7,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
-                    onPressed: (){},
+                    onPressed: (){
+                      // Navigator.push(context, MaterialPageRoute(builder: (context)=> const FetchDataScreen(),
+                      // ));
+                    },
                     child: const Text('Fetch Data', style: TextStyle(color: Colors.white),
                     ),
                 ),
