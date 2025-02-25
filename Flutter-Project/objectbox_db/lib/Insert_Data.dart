@@ -89,15 +89,17 @@ class InsertDataScreen extends StatefulWidget{
                                   phoneNumberController.text,emailController.text);
                  userBox.put(user); //put(user) → Inserts or updates the User object in the ObjectBox database.
 
-                  // String user1 = userBox.get(5) as String;
-                  // print(user1);
-                  // String users = userBox.getAll() as String;
-                  // print(users);
+                 //print(userBox.getAll());
 
+                  void printAllUserData(){
+                   final u_Data = userBox.getAll();
+                   u_Data.forEach((user){
+                     print(
+                         "ID: ${user.id}, First Name: ${user.firstname}, Last Name: ${user.lastname}, Phone No: ${user.phoneNumber}, Email: ${user.email}");
+                   });
+                 }
 
-                  print(userBox.getAll());
-                 //print(userBox.get(4));
-                 
+                 //printAllUserData();
 
                 },
                 child: const Text('Insert Data',
