@@ -21,10 +21,36 @@ class FetchDataScreen extends StatefulWidget{
       ),
       body: ListView.builder(itemCount: fetchData().length,
           itemBuilder: (context, index){
-            User user = fetchData()[index];
-          return ListTile(
-            title: Text('${user.firstname}',),
-            tileColor: Colors.blue,
+            User? user = fetchData()[index];
+          return Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ListTile(
+              title: Text('${user.firstname}',),
+              tileColor: Colors.lightBlueAccent,
+              trailing: SizedBox(
+                width: 100,
+                child: Row(
+                  children: [
+                    IconButton(onPressed: (){
+                      setState(() {
+                        deleteData(user!.id);
+                      });
+                    },
+                        icon: const Icon(Icons.delete, color: Colors.red,)),
+                    IconButton(onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=> const editDataScreen(),
+                      ));
+
+                      // setState(() {
+                      //   updateData(0, 'Dhruv', 'Rathi', '6392301514', 'dhruv123@gmail.com');
+                      // });
+
+                    },
+                        icon: const Icon(Icons.edit, color: Colors.green,)),
+                  ],
+                ),
+              ),
+            ),
           );
           },),
     );

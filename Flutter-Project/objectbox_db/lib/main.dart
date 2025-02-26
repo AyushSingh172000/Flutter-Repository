@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:objectbox_db/Insert_Data.dart';
 
+import 'fetch_Data.dart';
 import 'helper.dart';
 late ObjectBox objectbox;
 void main() async {
@@ -74,8 +75,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
                     onPressed: (){
-                      // Navigator.push(context, MaterialPageRoute(builder: (context)=> const FetchDataScreen(),
-                      // ));
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=> const FetchDataScreen(),
+                      ));
                     },
                     child: const Text('Fetch Data', style: TextStyle(color: Colors.white),
                     ),

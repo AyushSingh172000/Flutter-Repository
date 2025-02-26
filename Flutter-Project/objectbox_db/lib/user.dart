@@ -10,9 +10,10 @@ class User{
   String? email;
 
   User(
-      this.firstname,
-      this.lastname,
-      this.phoneNumber,
-      this.email,
-      );
+    // this.id,
+    this.firstname,
+    this.lastname,
+    this.phoneNumber,
+    this.email,
+  );
 }

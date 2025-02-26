@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:objectbox_db/main.dart';
+import 'package:objectbox_db/objectbox.g.dart';
 import 'package:objectbox_db/user.dart';
 
 class InsertDataScreen extends StatefulWidget{
@@ -88,6 +89,7 @@ class InsertDataScreen extends StatefulWidget{
                 final user =   User(firstNameController.text,lastNameController.text,
                                   phoneNumberController.text,emailController.text);
                  userBox.put(user); //put(user) → Inserts or updates the User object in the ObjectBox database.
+                 // userBox.put(user, mode: PutMode.update); // it will based on the id.
 
                  //print(userBox.getAll());
 
