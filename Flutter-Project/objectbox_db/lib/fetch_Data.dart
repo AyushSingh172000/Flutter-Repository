@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:objectbox_db/database_services.dart';
 import 'package:objectbox_db/user.dart';
 
+import 'edit_Data.dart';
+
 class FetchDataScreen extends StatefulWidget{
   const FetchDataScreen({super.key});
 
@@ -25,7 +27,7 @@ class FetchDataScreen extends StatefulWidget{
           return Padding(
             padding: const EdgeInsets.all(8.0),
             child: ListTile(
-              title: Text('${user.firstname}',),
+              title: Text('ID:${user.id}    ${user.firstname}',),
               tileColor: Colors.lightBlueAccent,
               trailing: SizedBox(
                 width: 100,
@@ -40,11 +42,6 @@ class FetchDataScreen extends StatefulWidget{
                     IconButton(onPressed: (){
                       Navigator.push(context, MaterialPageRoute(builder: (context)=> const editDataScreen(),
                       ));
-
-                      // setState(() {
-                      //   updateData(0, 'Dhruv', 'Rathi', '6392301514', 'dhruv123@gmail.com');
-                      // });
-
                     },
                         icon: const Icon(Icons.edit, color: Colors.green,)),
                   ],

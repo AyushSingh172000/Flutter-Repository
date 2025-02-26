@@ -3,6 +3,8 @@ import 'package:objectbox_db/main.dart';
 import 'package:objectbox_db/objectbox.g.dart';
 import 'package:objectbox_db/user.dart';
 
+import 'fetch_Data.dart';
+
 class InsertDataScreen extends StatefulWidget{
   const InsertDataScreen({super.key});
   @override
@@ -92,14 +94,22 @@ class InsertDataScreen extends StatefulWidget{
                  // userBox.put(user, mode: PutMode.update); // it will based on the id.
 
                  //print(userBox.getAll());
+                  //dispose();
+                 Navigator.push(context, MaterialPageRoute(builder: (context)=> const FetchDataScreen(),
+                 ));
+                  firstNameController.clear();
+                  lastNameController.clear();
+                  phoneNumberController.clear();
+                  emailController.clear();
 
-                  void printAllUserData(){
-                   final u_Data = userBox.getAll();
-                   u_Data.forEach((user){
-                     print(
-                         "ID: ${user.id}, First Name: ${user.firstname}, Last Name: ${user.lastname}, Phone No: ${user.phoneNumber}, Email: ${user.email}");
-                   });
-                 }
+
+                 //  void printAllUserData(){
+                 //   final u_Data = userBox.getAll();
+                 //   u_Data.forEach((user){
+                 //     print(
+                 //         "ID: ${user.id}, First Name: ${user.firstname}, Last Name: ${user.lastname}, Phone No: ${user.phoneNumber}, Email: ${user.email}");
+                 //   });
+                 // }
 
                  //printAllUserData();
 
