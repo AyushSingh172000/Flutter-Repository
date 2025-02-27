@@ -1,20 +1,24 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:objectbox_db/user.dart';
 
 import 'database_services.dart';
 import 'fetch_Data.dart';
 
-class editDataScreen extends StatefulWidget{
-  const editDataScreen({super.key});
+class EditDataScreen extends StatefulWidget{
 
+  //final User user;
+  const EditDataScreen({super.key , required this.id});
+  final int id;
   @override
-  State<editDataScreen> createState() => _editDataScreenState();
+  State<EditDataScreen> createState() => _EditDataScreenState();
 }
-class _editDataScreenState extends State<editDataScreen> {
-  TextEditingController firstNameController = TextEditingController();
-  TextEditingController lastNameController = TextEditingController();
-  TextEditingController phoneNumberController = TextEditingController();
-  TextEditingController emailController = TextEditingController();
+class _EditDataScreenState extends State<EditDataScreen> {
+  TextEditingController edit_firstName_Controller = TextEditingController();
+  TextEditingController edit_lastName_Controller = TextEditingController();
+  TextEditingController edit_phoneNumber_Controller = TextEditingController();
+  TextEditingController edit_email_Controller = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery
@@ -27,14 +31,14 @@ class _editDataScreenState extends State<editDataScreen> {
             .of(context)
             .colorScheme
             .inversePrimary,
-        title: const Text('Edit Data'),
-      ),
+        title: const Text('Edit Data')),
       body: Padding(
           padding: EdgeInsets.all(8.0),
         child: Column( mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Text('Editing User with ID: ${widget.id}', style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),),
             TextFormField(
-              controller: firstNameController,
+              controller: edit_firstName_Controller,
               decoration: const InputDecoration(
                 label: Text('Edited First Name'),
                 border: OutlineInputBorder(),
@@ -44,7 +48,7 @@ class _editDataScreenState extends State<editDataScreen> {
               height: size.height*.01,
             ),
             TextFormField(
-              controller: lastNameController,
+              controller: edit_lastName_Controller,
               decoration: const InputDecoration(
                 label: Text('Edited Last Name'),
                 border: OutlineInputBorder(),
@@ -54,7 +58,7 @@ class _editDataScreenState extends State<editDataScreen> {
               height: size.height*.01,
             ),
             TextFormField(
-              controller: phoneNumberController,
+              controller: edit_phoneNumber_Controller,
               decoration: const InputDecoration(
                 label: Text('Edited Phone No.'),
                 border: OutlineInputBorder(),
@@ -64,7 +68,7 @@ class _editDataScreenState extends State<editDataScreen> {
               height: size.height*.01,
             ),
             TextFormField(
-              controller: emailController,
+              controller: edit_email_Controller,
               decoration: const InputDecoration(
                 label: Text('Edited Email'),
                 border: OutlineInputBorder(),
@@ -78,12 +82,14 @@ class _editDataScreenState extends State<editDataScreen> {
               child: ElevatedButton(
                   style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
                   onPressed: (){
-
+                    // final updateData = User(widget.id, edit_firstName_Controller.text, edit_lastName_Controller.text, edit_phoneNumber_Controller.text, edit_email_Controller.text);
+                   print(widget.id);
                     setState(() {
-                      updateData(8, 'Dhruv', 'Rathi', '6392301514', 'dhruv123@gmail.com');
+                      updateData(widget.id, edit_firstName_Controller.text, edit_lastName_Controller.text, edit_phoneNumber_Controller.text, edit_email_Controller.text);
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=> const FetchDataScreen(),
+                      ));
                     });
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=> const FetchDataScreen(),
-                    ));
+
                   },
                   child: const Text('Update Data',
                   style: TextStyle(color: Colors.white),

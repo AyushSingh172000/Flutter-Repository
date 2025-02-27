@@ -27,7 +27,7 @@ class FetchDataScreen extends StatefulWidget{
           return Padding(
             padding: const EdgeInsets.all(8.0),
             child: ListTile(
-              title: Text('ID:${user.id}    ${user.firstname}',),
+              title: Text('ID:${user.id}    ${user.firstname} ${user.lastname}',),
               tileColor: Colors.lightBlueAccent,
               trailing: SizedBox(
                 width: 100,
@@ -35,12 +35,13 @@ class FetchDataScreen extends StatefulWidget{
                   children: [
                     IconButton(onPressed: (){
                       setState(() {
-                        deleteData(user!.id);
+                        deleteData(user.id);
                       });
                     },
                         icon: const Icon(Icons.delete, color: Colors.red,)),
                     IconButton(onPressed: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=> const editDataScreen(),
+                      Navigator.push(context, MaterialPageRoute(
+                        builder: (context)=> EditDataScreen(id:user.id,),
                       ));
                     },
                         icon: const Icon(Icons.edit, color: Colors.green,)),
