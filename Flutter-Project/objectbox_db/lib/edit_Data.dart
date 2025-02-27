@@ -2,8 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:objectbox_db/user.dart';
 
+import 'Objectbox_db_provider.dart';
 import 'database_services.dart';
 import 'fetch_Data.dart';
+import 'package:provider/provider.dart';
 
 class EditDataScreen extends StatefulWidget{
 
@@ -82,13 +84,19 @@ class _EditDataScreenState extends State<EditDataScreen> {
               child: ElevatedButton(
                   style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
                   onPressed: (){
+                    Provider.of<ObjectBoxProvider>(context, listen: false).updateData(widget.id, edit_firstName_Controller.text,
+                        edit_lastName_Controller.text, edit_phoneNumber_Controller.text,
+                        edit_email_Controller.text,);
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>  FetchDataScreen()));
+
                     // final updateData = User(widget.id, edit_firstName_Controller.text, edit_lastName_Controller.text, edit_phoneNumber_Controller.text, edit_email_Controller.text);
-                   print(widget.id);
-                    setState(() {
-                      updateData(widget.id, edit_firstName_Controller.text, edit_lastName_Controller.text, edit_phoneNumber_Controller.text, edit_email_Controller.text);
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=> const FetchDataScreen(),
-                      ));
-                    });
+                   //print(widget.id);
+                    // setState(() {
+                    //   updateData(widget.id, edit_firstName_Controller.text, edit_lastName_Controller.text, edit_phoneNumber_Controller.text, edit_email_Controller.text);
+                    //   Navigator.push(context, MaterialPageRoute(builder: (context)=> const FetchDataScreen(),
+                    //   ));
+                    // });
+
 
                   },
                   child: const Text('Update Data',

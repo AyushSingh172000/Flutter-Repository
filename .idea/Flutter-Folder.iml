@@ -30,9 +30,18 @@
       <excludeFolder url="file://$MODULE_DIR$/Flutter-Project/my_first_project/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/Flutter-Project/my_first_project/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/Flutter-Project/my_first_project/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter-Project/daily_notes/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter-Project/daily_notes/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter-Project/daily_notes/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter-Project/objectbox_db/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter-Project/objectbox_db/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter-Project/objectbox_db/build" />
       <excludeFolder url="file://$MODULE_DIR$/Flutter-Project/provider_project/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/Flutter-Project/provider_project/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/Flutter-Project/provider_project/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter-Project/objectbox_tutorial/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter-Project/objectbox_tutorial/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter-Project/objectbox_tutorial/build" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -1,24 +1,37 @@
-import 'package:flutter/cupertino.dart';
+//import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:objectbox_tutorial/model/item_model.dart';
 import 'package:objectbox_tutorial/model/order_model.dart';
 
 import 'objectbox.g.dart';
 
 class OrderScreen extends StatefulWidget{
-  final OrderModel? orderModel;
-  final Box<OrderModel> orderBox;
   const OrderScreen({
     Key? key,
-    this.orderModel,
+
     required this.orderBox,
+    this.orderModel,
 }) : super(key: key);
+  final Box<OrderModel> orderBox;
+  final OrderModel? orderModel;
+
 
   @override
   State<OrderScreen> createState() => _OrderScreenState();
 }
 
 class _OrderScreenState extends State<OrderScreen>{
-  final items = [];
+
+  List<ItemModel> items = [
+    ItemModel(itemCount: 0, itemName: 'Pizza Salami'),
+    ItemModel(itemCount: 0, itemName: 'Pizza Margaretta'),
+    ItemModel(itemCount: 0, itemName: 'Pizza Spaghetti'),
+    ItemModel(itemCount: 0, itemName: 'Pizza Lasagne'),
+    ItemModel(itemCount: 0, itemName: 'Pizza Rice with Chicken'),
+    ItemModel(itemCount: 0, itemName: 'Fried Noodle'),
+    ItemModel(itemCount: 0, itemName: 'Fried Rice'),
+    ItemModel(itemCount: 0, itemName: 'Salad'),
+  ];
 
   @override
   void initState() {
@@ -59,8 +72,9 @@ class _OrderScreenState extends State<OrderScreen>{
                             ),
                           ),
                           ElevatedButton(onPressed: (){
-                            if (items.[index].itemCount == 0) return;
+                            if (items[index].itemCount == 0) return;
                             items[index].itemCount--;
+                            saveOrderModel(index);
                           },
                               child: const Icon(Icons.remove),
                           )
@@ -94,9 +108,7 @@ class _OrderScreenState extends State<OrderScreen>{
   void saveOrderModel(int index){
     widget.orderModel?.items.add(items[index]);
     widget.orderBox.put(widget.orderModel!);
-    setState(() {
-
-    });
+    setState(() {});
 
   }
 

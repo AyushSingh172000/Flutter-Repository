@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:objectbox_tutorial/home_screen.dart';
+
+import 'customer_order_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,11 +15,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Chef App',
+      title: 'Order App',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        primarySwatch: Colors.blue,
       ),
-      home: const CustomerOrderScreen(),
+      home: const HomeScreen(),
     );
   }
 }

@@ -66,7 +66,7 @@ class MyHomePage extends StatelessWidget {
               return Text(
                 // '${Provider.of<CounterProvider>(ctx, listen: true) /// By default the listen: is true.
                 //     .getCount()}',
-                '${ctx.watch<CounterProvider>().getCount()}', /// Use of write whenever the listen will get true.
+                '${ctx.watch<CounterProvider>().getCount()}', /// Use of write whenever the listen will get true and also when show data on UI.
                 style: TextStyle(fontSize: 25),
               );
             },
@@ -81,14 +81,14 @@ class MyHomePage extends StatelessWidget {
             onPressed: () {
               /// Provider.of<CounterProvider>(context, listen: false).incrementCount();
 
-              context.read<CounterProvider>().incrementCount(); /// Use of read whenever the listen will get false.
+              context.read<CounterProvider>().incrementCount(); /// Use of read whenever the listen will get false and also when called only methods.
             },
             child: const Icon(Icons.add),
           ),FloatingActionButton(
             onPressed: () {
               /// Provider.of<CounterProvider>(context, listen: false).decrementCount();
 
-              context.read<CounterProvider>().decrementCount(); /// Use of read whenever the listen will get false.
+              context.read<CounterProvider>().decrementCount(); /// Use of read whenever the listen will get false and also when called only methods.
             },
             child: const Icon(Icons.remove),
           ),

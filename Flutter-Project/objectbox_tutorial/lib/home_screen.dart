@@ -22,17 +22,18 @@ class _HomeScreenState extends State<HomeScreen>{
   Box<OrderModel>? orderBox;
   Box<ItemModel>? itemBox;
 
+  final syncServerIp = Platform.isAndroid ? '10.0.2.2' : '127.0.0.1';
+
   @override
   void initState() {
     super.initState();
     openStore().then((Store store){
       _store = store;
-      var syncServerIp = Platform.isAndroid ? '10.0.2.2' : '127.0.0.1';
       Sync.client(
         store,
         'ws:$syncServerIp :9999',
         SyncCredentials.none(),
-      );
+      ).start();
       orderBox = store.box<OrderModel>();
     });
   }
@@ -62,10 +63,10 @@ class _HomeScreenState extends State<HomeScreen>{
                   final orderModel = OrderModel();
                   Navigator.push(
                       context,
-                      MaterialPageRoute
-                        (builder: (context) =>  OrderScreen(
-                          orderModel: orderModel,
+                      MaterialPageRoute<void>
+                        (builder: (BuildContext context) =>  OrderScreen(
                           orderBox: orderBox!,
+                          orderModel: orderModel,
                       ),
                       ),
                   );

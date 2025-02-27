@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:objectbox_db/helper.dart';
 import 'package:objectbox_db/main.dart';
 import 'package:objectbox_db/objectbox.g.dart';
 import 'package:objectbox_db/user.dart';
+import 'package:provider/provider.dart';
 
+import 'Objectbox_db_provider.dart';
 import 'fetch_Data.dart';
 
 class InsertDataScreen extends StatefulWidget{
-  const InsertDataScreen({super.key});
+  const InsertDataScreen({super.key});  // required ObjectBox objectBox
   @override
   State<InsertDataScreen> createState() => _InsertDataScreenState();
 
@@ -17,6 +20,8 @@ class InsertDataScreen extends StatefulWidget{
   TextEditingController phoneNumberController = TextEditingController();
   TextEditingController emailController = TextEditingController();
 
+  //get userBox => null;
+
   @override
   void dispose(){         // dispose is called for clear the controller text field.
     firstNameController.dispose();
@@ -26,9 +31,11 @@ class InsertDataScreen extends StatefulWidget{
 
     super.dispose();
   }
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
+    final provider = Provider.of<ObjectBoxProvider>(context, listen: false);
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -85,22 +92,32 @@ class InsertDataScreen extends StatefulWidget{
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
                 onPressed: (){
-                 final userBox = objectbox.store.box<User>();    //  Retrieves an ObjectBox database box for the User model.   box<User>():-> It is like a table in SQL databases where User objects are stored.
+                 //final userBox = objectbox.store.box<User>();    //  Retrieves an ObjectBox database box for the User model.   box<User>():-> It is like a table in SQL databases where User objects are stored.
 
 
-                final user =   User(firstNameController.text,lastNameController.text,
-                                  phoneNumberController.text,emailController.text);
-                 userBox.put(user); //put(user) → Inserts or updates the User object in the ObjectBox database.
+                final user =   User(0,firstNameController.text,
+                                    lastNameController.text,
+                                    phoneNumberController.text,
+                                    emailController.text);
+                user.id=0;
+
+                provider.insertData(user);
+                 //userBox.put(user); //put(user) → Inserts or updates the User object in the ObjectBox database.
                  // userBox.put(user, mode: PutMode.update); // it will based on the id.
 
                  //print(userBox.getAll());
                   //dispose();
-                 Navigator.push(context, MaterialPageRoute(builder: (context)=> const FetchDataScreen(),
-                 ));
-                  firstNameController.clear();
-                  lastNameController.clear();
-                  phoneNumberController.clear();
-                  emailController.clear();
+                 firstNameController.clear();
+                 lastNameController.clear();
+                 phoneNumberController.clear();
+                 emailController.clear();
+
+                 Navigator.pushReplacement(context,
+                     MaterialPageRoute(builder: (context) => const FetchDataScreen()),
+                 );
+                 // Navigator.push(context, MaterialPageRoute(builder: (context)=> FetchDataScreen(),
+                 // ));
+
 
 
                  //  void printAllUserData(){
